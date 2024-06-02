@@ -1,0 +1,405 @@
+@font-face {
+    font-family: Product Sans;
+    src: url(Fonts/Product\ Sans\ Regular.ttf);
+}
+@font-face {
+    font-family: Product Sans B;
+    src: url(Fonts/Product\ Sans\ Bold.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Product Sans;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-color: #CAF4FF;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 0 10vw;
+    z-index: 99;
+}
+
+nav a, nav i {
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cntr-nav {
+    display: flex;
+    gap: 3vw;
+}
+
+nav i {
+    font-size: 1.5vw;
+}
+
+.one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(150deg, rgb(160, 222, 255)), rgb(202, 244, 255);
+}
+
+.one h1 {
+    font-size: 25vw;
+    font-family: serif;
+    color: transparent; /* Make the text color transparent */
+    background: linear-gradient(to right, orange, lightblue); /* Gradient background */
+    -webkit-background-clip: text; /* Use background-clip to apply the gradient to text */
+    background-clip: text;
+}
+
+#fanta, #orange-cut, #orange, #leaf, #leaf2, #leaf3 {
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#fanta {
+    width: 40%;
+    z-index: 2;
+}
+
+#orange-cut {
+    top: 10%;
+    left: 32%;
+    width: 15%;
+    z-index: 1;
+}
+
+#orange {
+    top: 55%;
+    right: 30%;
+    width: 20%;
+    z-index: 3;
+}
+
+#leaf {
+    top: 10%;
+    left: 0;
+    width: 18%;
+    transform: rotate(60deg);
+}
+
+#leaf2 {
+    top: 70%;
+    left: 80%;
+    width: 12%;
+    transform: rotate(-90deg);
+}
+
+#leaf3 {
+    top: 10%;
+    right: 0;
+    width: 20%;
+}
+
+.two {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: rgb(90, 178, 255);
+}
+
+.lft-two, .rght-two {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    width: 50%;
+    height: 100%;
+}
+
+.lft-two svg {
+    margin-top: 50vh;
+    width: 90%;
+    transform: rotateX(50deg);
+}
+
+.rght-two h1 {
+    color: #fff;
+    font-size: 5vw;
+}
+
+.rght-two p {
+    font-size: 1vw;
+    color: #fff;
+    width: 80%;
+}
+
+.three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(150deg, rgb(90, 178, 255), rgb(255, 249, 208));
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    width: 25vw;
+    height: 70vh;
+    margin-top: 10vh;
+    border-radius: 20px;
+    background-color: rgb(255, 166, 47);
+}
+
+.card h1 {
+    margin-top: 40vh;
+    font-size: 3vw;
+}
+
+.card button {
+    font-size: 1vw;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background-color: rgb(255, 149, 0);
+    padding: 1vw 2vw;
+}
+
+#cocacola, #pepsi, .lemon {
+    position: absolute;
+    left: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#cocacola {
+    top: -15%;
+    width: 60%;
+    transform: translate(-50%, 0);
+}
+
+#pepsi {
+    top: -15%;
+    width: 85%;
+    transform: translate(-50%, 0);
+}
+
+.lemon {
+    top: -30%;
+    width: 25vw;
+    transform: translate(-50%, 0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    nav a, nav i {
+        font-size: 2vw;
+    }
+
+    nav i {
+        font-size: 3vw;
+    }
+
+    .one h1 {
+        font-size: 40vw;
+    }
+
+    .rght-two h1 {
+        font-size: 8vw;
+    }
+
+    .rght-two p {
+        font-size: 2vw;
+    }
+
+    .card {
+        width: 35vw;
+        height: 60vh;
+    }
+
+    .card h1 {
+        margin-top: 30vh;
+        font-size: 5vw;
+    }
+
+    .card button {
+        font-size: 2vw;
+        padding: 2vw 4vw;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5vw;
+    }
+
+    nav a, nav i {
+        font-size: 3vw;
+    }
+
+    nav i {
+        font-size: 4vw;
+    }
+
+    .one h1 {
+        font-size: 60vw;
+    }
+
+    .rght-two h1 {
+        font-size: 10vw;
+    }
+
+    .rght-two p {
+        font-size: 3vw;
+    }
+
+    .card {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .card h1 {
+        margin-top: 20vh;
+        font-size: 6vw;
+    }
+
+    .card button {
+        font-size: 3vw;
+        padding: 3vw 6vw;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 3vw;
+    }
+
+    nav a, nav i {
+        font-size: 4vw;
+    }
+
+    nav i {
+        font-size: 5vw;
+    }
+
+    .one h1 {
+        font-size: 80vw;
+    }
+
+    .rght-two h1 {
+        font-size: 12vw;
+    }
+
+    .rght-two p {
+        font-size: 4vw;
+    }
+
+    .card {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .card h1 {
+        margin-top: 10vh;
+        font-size: 7vw;
+    }
+
+    .card button {
+        font-size: 4vw;
+        padding: 4vw 8vw;
+    }
+}
+
+@media (max-width: 320px) {
+    nav {
+        padding: 0 2vw;
+    }
+
+    nav a, nav i {
+        font-size: 5vw;
+    }
+
+    nav i {
+        font-size: 6vw;
+    }
+
+    .one h1 {
+        font-size: 100vw;
+    }
+
+    .rght-two h1 {
+        font-size: 14vw;
+    }
+
+    .rght-two p {
+        font-size: 5vw;
+    }
+
+    .card {
+        width: 70vw;
+        height: 30vh;
+    }
+
+    .card h1 {
+        margin-top: 5vh;
+        font-size: 8vw;
+    }
+
+    .card button {
+        font-size: 5vw;
+        padding: 5vw 10vw;
+    }
+}
+
+/* Define Keyframes for Animations */
+@keyframes fadeInScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply Animation to h1 Tags */
+.one h1, .rght-two h1, .card h1 {
+    animation: fadeInScaleUp 2s ease-in-out;
+}
+nav a {
+    color: rgb(0, 0, 0); /* Change link color to orange */
+    text-decoration: none;
+    margin: 0 1em;
+
+}
+
+.ri-menu-fill {
+    color: transparent; /* Make the icon color transparent */
+    background:  rgb(0, 0, 0); /* Gradient background */
+    -webkit-background-clip: text; /* Use background-clip to apply the gradient to the icon */
+    background-clip: text;
+    font-size: 2.5em;
+    cursor: pointer;
+}
