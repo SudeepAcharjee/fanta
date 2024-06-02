@@ -1,2 +1,3 @@
-# fanta
-This is for my youtube channel tutorial.
+## To lazy to write a readme file its to easy to use
+
+
